@@ -1,27 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+ 
+@layer base {
+  
+}
+/* .multi-color{
+  bg-gradient-to-r from-purple-400 to-pink-600;
+} */
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.bg-imagehero{
+  background-image: url(https://images.unsplash.com/photo-1563089145-599997674d42?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 82%, 51% 100%, 24% 89%, 0 100%, 0 0);
+}
+.shapehero{
+  clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 88%, 66% 100%, 37% 89%, 1% 100%, 0 0);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+@layer base {
+  * {
+    @apply border-border;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  body {
+    @apply bg-background text-foreground;
+  }
 }
