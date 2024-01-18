@@ -3,6 +3,7 @@ import Link from "next/link";
 import { IdataTypes } from "./sub-components/Interface_type";
 import { GetNewArrivals } from "@/ecomerce-project/sanity-utils";
 import AddToCart from "./sub-components/AddToCart";
+import Image from "next/image";
 
 async function Section1() {
   const data: IdataTypes[] = await GetNewArrivals();
@@ -33,7 +34,7 @@ async function Section1() {
                 >
                   <Link href={`/product/${items.slug}`}>
                     <div className="rounded-lg h-auto md:h-[45%] overflow-hidden">
-                      <img
+                      <Image
                         alt={items.name}
                         className="object-cover object-center h-full w-full "
                         src={items.imageUrl}

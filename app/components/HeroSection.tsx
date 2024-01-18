@@ -15,7 +15,7 @@ export default async function HeroSection() {
         {/* text */}
         <div className='flex flex-col justify-center items-center p-3 py-8'>
             <p className='text-3xl text-red-500 '>New Running Shoes</p>
-            <p className='text-5xl font-extrabold text-white'>Men's Like Plex</p>
+            <p className='text-5xl font-extrabold text-white'>Men&apos;s Like Plex</p>
             <p className='text-white text-xl sm:w-[50%] '>ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <div className='flex flex-wrap gap-3 pb-10'>
                 <Button className='bg-red-500'>

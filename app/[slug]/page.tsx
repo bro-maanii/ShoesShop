@@ -4,6 +4,7 @@ import { GetCategoryPage } from "@/ecomerce-project/sanity-utils";
 import Link from "next/link";
 import React from "react";
 import AddToCart from "../components/sub-components/AddToCart";
+import Image from "next/image";
 
 export default async function page({ params }: { params: { slug: string } }) {
   const data: ICategoryProduct = await GetCategoryPage(params.slug);
@@ -17,7 +18,7 @@ export default async function page({ params }: { params: { slug: string } }) {
           {data.map((products: any) => (
             <div key={products._id} className="lg:w-1/4  md:w-1/2 p-4 w-4/5 ">
               <Link href={`/product/${products.slug}`}>
-                <img
+                <Image
                   alt={products.name}
                   className="hover:scale-90 delay-500 duration-700 object-center w-full block relative h-96 object-cover border-sky-300 rounded overflow-hidden"
                   src={products.imageUrl}

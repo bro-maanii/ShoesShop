@@ -7,6 +7,7 @@ import Link from "next/link";
 import { IdataTypes } from "./sub-components/Interface_type";
 import { GetSaleProductHomeView } from "@/ecomerce-project/sanity-utils";
 import AddToCart from "./sub-components/AddToCart";
+import Image from "next/image";
 
 export default async function Section2() {
     const data: IdataTypes[] = await GetSaleProductHomeView();
@@ -43,7 +44,7 @@ export default async function Section2() {
               <div key={product._id}  className="group md:skew-y-12 md:hover:skew-y-0 duration-500 delay-300">
                 <Link href={`/product/${product.slug}`}>
                 <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
-                  <img
+                  <Image
                     src={product.imageUrl}
                     alt={product.name}
                     className="h-full w-full object-cover object-center group-hover:opacity-75"
@@ -55,7 +56,7 @@ export default async function Section2() {
                 <h5 className="mt-4 text-sm text-gray-700">{product.categoryName}</h5>
                 <p className="mt-1 text-lg font-medium text-gray-900 line-through opacity-75">{product.bprice}$</p>
                 <p className="mt-1 text-lg text-gray-900 font-bold">{product.aprice}$</p>
-                <AddToCart image={product.imageUrl} currency="USD" name={product.name} description={product.description} price={product.aprice} _id={product._id}/>
+                <AddToCart image={product.imageUrl} currency="USD" name={product.name} description={product.description} price={product.aprice} _id={product._id} price_id={""}/>
                 </div>
                 
               </div>
