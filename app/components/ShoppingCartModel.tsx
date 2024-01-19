@@ -56,8 +56,9 @@ const ShoppingCartModal = () => {
                 {cartCount === 0 ? (
                   <h1 className="text-2xl font-bold flex justify-center items-center py-6">You do not have any items</h1>
                 ) : (
+
                   <>
-                    {
+                    { 
                     Object.values(cartDetails ?? {}).map((entry) => (
                       <li key={entry.id} className="flex py-6 ">
                         <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">

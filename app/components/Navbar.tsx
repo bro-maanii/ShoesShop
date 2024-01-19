@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <div className="relative flex justify-between items-center  sm:px-20  py-8 px-3 shadow-md">
       <Link href={"/"}>
-      <Image className="h-[68px] w-[74px] rounded-full" src={logo} alt="logo" />
+      <Image className="h-[68px] w-[74px] rounded-full" src={logo} alt="logo" width={75} height={69} />
       </Link>
       {/* options */}
       <div>

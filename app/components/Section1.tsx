@@ -38,6 +38,8 @@ async function Section1() {
                         alt={items.name}
                         className="object-cover object-center h-full w-full "
                         src={items.imageUrl}
+                        width={500}
+                        height={500}
                       />
                     </div>
                   </Link>

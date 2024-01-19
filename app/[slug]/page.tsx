@@ -22,6 +22,8 @@ export default async function page({ params }: { params: { slug: string } }) {
                   alt={products.name}
                   className="hover:scale-90 delay-500 duration-700 object-center w-full block relative h-96 object-cover border-sky-300 rounded overflow-hidden"
                   src={products.imageUrl}
+                  width={500}
+                  height={384}
                 />
               </Link>
               <div className="mt-4">
